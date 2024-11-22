@@ -16,7 +16,7 @@ set(boost_version $ENV{REZ_BUILD_PROJECT_VERSION})
 
 set(url_boost http://downloads.sourceforge.net/project/boost/boost/1.86.0/boost_1_86_0.tar.gz)
 
-set(b2_args -j ${ncpus} -q -s NO_BZIP2=1 --prefix=${CMAKE_INSTALL_PREFIX} --exec-prefix=${CMAKE_INSTALL_PREFIX} link=shared link=static --toolset=gcc cxxflags=-fPIC)
+set(b2_args -j ${ncpus} -q -s NO_BZIP2=1 --prefix=${CMAKE_INSTALL_PREFIX} --exec-prefix=${CMAKE_INSTALL_PREFIX} link=shared link=static --toolset=gcc cxxflags=-fPIC --with-python)
 
 if(${REZ_BUILD_INSTALL})
     set(install_cmd ./b2 install ${b2_args})
