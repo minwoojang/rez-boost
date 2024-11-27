@@ -12,7 +12,8 @@ description = \
     """
 
 build_requires = [
-    "python-3.7"
+    "gcc-6",
+    "python-3"
 ]
 
 
